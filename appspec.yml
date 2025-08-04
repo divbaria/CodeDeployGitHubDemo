@@ -1,9 +1,20 @@
+# version: 0.0
+# os: windows
+# files:
+#   - source: \index.html
+#     destination: C:\inetpub\wwwroot
+# hooks:
+#   BeforeInstall:
+#     - location: \before-install.bat
+#       timeout: 900
 version: 0.0
-os: windows
+os: linux
 files:
-  - source: \index.html
-    destination: C:\inetpub\wwwroot
+  - source: /
+    destination: /home/ec2-user/CodeDeployGitHubDemo
 hooks:
+# Install:
   BeforeInstall:
     - location: \before-install.bat
       timeout: 900
+# ValidateService:
